@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:app="http://schemas.android.com/apk/res-auto"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:layout_width="wrap_content"
+  android:layout_height="wrap_content"
+  android:elevation="6dp">
+  <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:padding="16dp">
+
+    <Button
+      android:id="@+id/buttonCurtir"
+      style="?attr/buttonBarButtonStyle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginEnd="8dp"
+      android:drawableLeft="@drawable/ic_baseline_favorite_24"
+      android:text="Gostei"
+      app:layout_constraintBottom_toBottomOf="parent"
+      app:layout_constraintEnd_toStartOf="@id/buttonShare"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textComentario" />
+
+    <Button
+      android:id="@+id/buttonShare"
+      style="?attr/buttonBarButtonStyle"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="8dp"
+      android:drawableLeft="@drawable/ic_baseline_message_24"
+      android:text="Comentar"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintStart_toEndOf="@id/buttonCurtir"
+      app:layout_constraintTop_toTopOf="@id/buttonCurtir" />
+
+    <ImageView
+      android:id="@+id/imageCard"
+      android:layout_width="0dp"
+      android:layout_height="200dp"
+      android:layout_marginTop="16dp"
+      android:scaleType="centerCrop"
+      android:src="@drawable/imagem1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/textTitulo" />
+
+    <TextView
+      android:id="@+id/textComentario"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="16dp"
+      android:maxLines="1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageCard"
+      tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+
+    <TextView
+      android:id="@+id/textTitulo"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:maxLines="1"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      tools:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry." />
+  </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.cardview.widget.CardView>
